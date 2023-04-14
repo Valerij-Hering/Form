@@ -87,6 +87,7 @@ border: 1px solid rgb(211, 211, 211);
 margin-bottom: 28px;
 outline: none;
 padding-left: 15px;
+background-color: #24292e00;
 }
 
 .box-input {
@@ -99,16 +100,18 @@ padding-left: 15px;
 }
 
 label {
-    position: absolute;
+    z-index: -1;
+  position: absolute;
     padding: 0px 5px;
-    left: 35px;
-    top: -10px;
-    z-index: 1;
+    left: 26px;
+    top: 10px;
+    
     background-color: white;
     font-size: 13px;
     color: rgb(211, 211, 211);
- 
+    transition: 0.28s;
 }
+
 
 input::placeholder {
   color: rgb(211, 211, 211);
@@ -132,15 +135,39 @@ input:focus::placeholder {
 }
 
 .name:focus + label{
-color: #24292e;
+  color: #24292e;
+  position: absolute;
+  padding: 0px 5px;
+  left: 26px;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+  font-size: 13px;
+  transition: 0.28s;
 }
 
 .email:focus + label{
-color: #24292e;
+  color: #24292e;
+  position: absolute;
+  padding: 0px 5px;
+  left: 26px;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+  font-size: 13px;
+  transition: 0.28s;
 }
 
 .textarea:focus + label{
-color: #24292e;
+  color: #24292e;
+  position: absolute;
+  padding: 0px 5px;
+  left: 26px;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+  font-size: 13px;
+  transition: 0.28s;
 }
 
 
@@ -159,6 +186,7 @@ margin-bottom: 20px;
 outline: none;
 padding-top: 10px;
 padding-left: 15px;
+background-color: #24292e00;
 }
 
 textarea:focus {
