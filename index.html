@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="icon" href="https://github.com/Valerij-Hering/Form/blob/main/form.png?raw=true">
+    <link rel="icon" href="/Users/zell/Desktop/Node/Projects/form/form.png">
 </head>
 <body>
     
@@ -16,17 +16,17 @@
 
             <div class="box-input animate__animated animate__backInDown">
                 <input class="name"  name="name" placeholder="">
-                <label for="name">Your name</label>
+                <label class="labelName" for="name">Your name</label>
             </div>
 
             <div class="box-input animate__animated animate__backInDown">
                 <input class="email" name="email" placeholder="">
-                <label for="email">Your email</label>
+                <label class="labelEmail" for="email">Your email</label>
             </div>
 
             <div class="box-input animate__animated animate__backInDown">
                 <textarea class="textarea" name="message" id="" cols="30" rows="10" placeholder=""></textarea>
-                <label class="lab" for="message">Your message</label>
+                <label class="labelTextarea" for="message">Your message</label>
             </div>
             <button class="animate__animated animate__backInDown">Send</button>
         </form>
@@ -105,13 +105,11 @@ label {
     padding: 0px 5px;
     left: 26px;
     top: 10px;
-    
     background-color: white;
     font-size: 13px;
     color: rgb(211, 211, 211);
     transition: 0.28s;
 }
-
 
 input::placeholder {
   color: rgb(211, 211, 211);
@@ -134,6 +132,42 @@ input:focus::placeholder {
   color: transparent;
 }
 
+.labelNameValue {
+  color: rgb(211, 211, 211);
+  position: absolute;
+  padding: 0px 5px;
+  left: 26px;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+  font-size: 13px;
+  transition: 0.28s;
+}
+
+.labelEmailValue {
+  color: rgb(211, 211, 211);
+  position: absolute;
+  padding: 0px 5px;
+  left: 26px;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+  font-size: 13px;
+  transition: 0.28s;
+}
+
+.labelTextareaValue {
+  color: rgb(211, 211, 211);
+  position: absolute;
+  padding: 0px 5px;
+  left: 26px;
+  top: -10px;
+  z-index: 1;
+  background-color: white;
+  font-size: 13px;
+  transition: 0.28s;
+}
+
 .name:focus + label{
   color: #24292e;
   position: absolute;
@@ -144,7 +178,7 @@ input:focus::placeholder {
   background-color: white;
   font-size: 13px;
   transition: 0.28s;
-}
+} 
 
 .email:focus + label{
   color: #24292e;
@@ -225,5 +259,38 @@ cursor: pointer;
   }
 }
 </style>
+<script>
+  const inputName = document.querySelector('.name');
+  const labelName = document.querySelector('.labelName');
+  const inputEmail = document.querySelector('.email');
+  const labelEmail = document.querySelector('.labelEmail');
+  const inputTextarea = document.querySelector('.textarea');
+  const labelTextarea = document.querySelector('.labelTextarea');
+
+  function inputValue (e) {
+    if (inputName.value.length > 1) {
+      labelName.classList.add('labelNameValue')
+    }
+    else {
+      labelName.classList.remove('labelNameValue')
+    }
+
+    if (inputEmail.value.length > 1) {
+      labelEmail.classList.add('labelEmailValue')
+    }
+    else {
+      labelEmail.classList.remove('labelEmailValue')
+    }
+
+    if (inputTextarea.value.length > 1) {
+      labelTextarea.classList.add('labelTextareaValue')
+    }
+    else {
+      labelTextarea.classList.remove('labelTextareaValue')
+    }
+  }
+
+  setInterval(inputValue, 100)
+</script>
 </body>
 </html>
