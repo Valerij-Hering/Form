@@ -268,21 +268,21 @@ cursor: pointer;
   const labelTextarea = document.querySelector('.labelTextarea');
 
   function inputValue (e) {
-    if (inputName.value.length > 1) {
+    if (inputName.value.length >= 1) {
       labelName.classList.add('labelNameValue')
     }
     else {
       labelName.classList.remove('labelNameValue')
     }
 
-    if (inputEmail.value.length > 1) {
+    if (inputEmail.value.length >= 1) {
       labelEmail.classList.add('labelEmailValue')
     }
     else {
       labelEmail.classList.remove('labelEmailValue')
     }
 
-    if (inputTextarea.value.length > 1) {
+    if (inputTextarea.value.length >= 1) {
       labelTextarea.classList.add('labelTextareaValue')
     }
     else {
