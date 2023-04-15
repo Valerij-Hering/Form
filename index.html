@@ -266,6 +266,12 @@ cursor: pointer;
   const labelEmail = document.querySelector('.labelEmail');
   const inputTextarea = document.querySelector('.textarea');
   const labelTextarea = document.querySelector('.labelTextarea');
+    
+  function inputFocus () {
+    inputName.focus()
+  }
+
+  setTimeout(inputFocus)
 
   function inputValue (e) {
     if (inputName.value.length >= 1) {
