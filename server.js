@@ -24,11 +24,11 @@ const messageSchema = {
 
 const Message = mongoose.model('MyMessages', messageSchema)
 
-app.get('/', (req, res) => {
+app.get('https://form-vh.netlify.app/', (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
 
-app.post('/', (req, res) => {
+app.post('https://form-vh.netlify.app/', (req, res) => {
     let newMessage = new Message({
         name: req.body.name,
         email: req.body.email,
