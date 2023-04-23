@@ -83,11 +83,12 @@ input {
 width: 90%;
 height: 45px;
 border-radius: 6px;
-border: 1px solid rgb(178, 178, 178);
+border: 1px solid #c9cace;
 margin-bottom: 28px;
 outline: none;
 padding-left: 15px;
 background-color: #24292e00;
+font-style: 16px;
 }
 
 .box-input {
@@ -103,25 +104,30 @@ label {
     z-index: -1;
   position: absolute;
     padding: 0px 5px;
-    left: 26px;
-    top: 10px;
+    left: 35px;
+    top: 11px;
     background-color: white;
-    font-size: 13px;
-    color: rgb(178, 178, 178);
-    transition: 0.28s;
+    font-size: 15px;
+    color: #919296;
+    transition: 0.20s;
+  font-weight: 400;
 }
 
 input::placeholder {
-  color: rgb(211, 211, 211);
+  color: #919296;
   font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .textarea::placeholder {
-  color: rgb(211, 211, 211);
+  color: #919296;
+  font-weight: 400;
 }
 
 input:focus {
-border: 1px solid #24292e;
+border: 1px solid 
+#3e86dd;
 }
 
 input:focus::placeholder {
@@ -133,75 +139,78 @@ input:focus::placeholder {
 }
 
 .labelNameValue {
-   color: rgb(178, 178, 178);
+  color: #919296;
   position: absolute;
   padding: 0px 5px;
   left: 26px;
-  top: -10px;
+  top: -8px;
   z-index: 1;
   background-color: white;
-  font-size: 12px;
-  transition: 0.28s;
+  font-size: 13px;
+  transition: 0.20s;
 }
 
 .labelEmailValue {
-  color: rgb(178, 178, 178);
+  color: #919296;
   position: absolute;
   padding: 0px 5px;
   left: 26px;
-  top: -10px;
+  top: -8px;
   z-index: 1;
   background-color: white;
-  font-size: 12px;
-  transition: 0.28s;
+  font-size: 13px;
+  transition: 0.20s;
 }
 
 .labelTextareaValue {
-  color: rgb(178, 178, 178);
+  color: #919296;
   position: absolute;
   padding: 0px 5px;
   left: 26px;
-  top: -10px;
+  top: -8px;
   z-index: 1;
   background-color: white;
-  font-size: 12px;
-  transition: 0.28s;
+  font-size: 13px;
+  transition: 0.20s;
 }
 
 .name:focus + label{
-  color: #24292e;
+  color: 
+#3e86dd;
   position: absolute;
   padding: 0px 5px;
   left: 26px;
-  top: -10px;
+  top: -8px;
   z-index: 1;
   background-color: white;
-  font-size: 12px;
-  transition: 0.28s;
+  font-size: 13px;
+  transition: 0.20s;
+  font-weight: 400;
 } 
 
 .email:focus + label{
-  color: #24292e;
+  color: 
+#3e86dd;
   position: absolute;
   padding: 0px 5px;
   left: 26px;
-  top: -10px;
+  top: -8px;
   z-index: 1;
   background-color: white;
-  font-size: 12px;
-  transition: 0.28s;
+  font-size: 13px;
+  transition: 0.20s;
 }
 
 .textarea:focus + label{
-  color: #24292e;
+  color: #3e86dd;
   position: absolute;
   padding: 0px 5px;
   left: 26px;
-  top: -10px;
+  top: -8px;
   z-index: 1;
   background-color: white;
-  font-size: 12px;
-  transition: 0.28s;
+  font-size: 13px;
+  transition: 0.20s;
 }
 
 
@@ -224,7 +233,8 @@ background-color: #24292e00;
 }
 
 textarea:focus {
-border: 1px solid #24292e;
+border: 1px solid 
+#3e86dd;
 }
 
 textarea:-webkit-autofill {
@@ -241,14 +251,13 @@ height: 50px;
 display: flex;
 justify-content: center;
 align-items: center;
-border: 1px solid #24292e;
-background-color: #24292e;
+border: 1px solid #016fd6;
+background-color: #016fd6;
 color: white;
 border-radius: 6px;
 margin-top: 40px;
 cursor: pointer;
 }
-
 @media all and (max-width: 500px) { 
   input {
     font-size: 16px;
